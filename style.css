@@ -1,0 +1,14 @@
+.box {
+  background-color: purple;
+  color: white;
+  text-align: center;
+  margin: 1rem 30%;
+  padding: 2rem;
+}
+input {
+  text-align: center;
+}
+button {
+  background-color: white;
+  color: purple;
+}

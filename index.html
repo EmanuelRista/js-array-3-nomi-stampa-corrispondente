@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="box">
+      <label for="number">Scrivi un numero da 0 a 2</label>
+      <input type="text" id="numberID" placeholder="Inserisci qui il numero" name="number" value="">
+      <button type="button" id="my_button" name="button">Click</button>
+      <p id="nameDisplayedID"></p>
+    </div>
+
+    <script type="text/javascript">
+
+      document.getElementById('my_button').addEventListener("click", displayGirl)
+
+      function displayGirl(){
+        var threeNames = ["Giulia", "Angelica", "Anisa"];
+
+        var chosenNumber = document.getElementById('numberID').value;
+
+        while (chosenNumber > 2) {
+          alert("Attenzione: Devi scegliere un numero da 0 a 2");
+          document.getElementById('numberID').value = "";
+          break
+        };
+
+        if (chosenNumber == 0) {
+          document.getElementById("nameDisplayedID").innerHTML = threeNames[0];
+          document.getElementById('numberID').value = "";
+        } else if (chosenNumber == 1) {
+          document.getElementById("nameDisplayedID").innerHTML = threeNames[1];
+          document.getElementById('numberID').value = "";
+        } else if (chosenNumber == 2) {
+          document.getElementById("nameDisplayedID").innerHTML = threeNames[2];
+          document.getElementById('numberID').value = "";
+        };
+      };
+    </script>
+  </body>
+</html>
